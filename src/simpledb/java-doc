@@ -1,0 +1,28 @@
+Part 1: FILTER
+Methods implemented:- redNext
+	it reads the tuples into t untill the iterator has tuples and passes them to the filter to compare. This comparison returns whether the predicate(equals or greaterthan) is true or false.
+	
+	
+Part 2: JOIN
+Methods implemented:- redNext
+		it uses two iterators to read tuples from two relations. I have used simple nested loops join. the first iterator acts as an iterator for outer relation 1 and 2nd one as inner. 
+		the condition compares the given predicate and checks whether they satisfy or not.
+		for greater_than test, it does not satisfy the predicate so the first field is ignored and the join output is acquired accordingly.
+		
+Part 3: Aggregate
+Methods Implemented:- Aggregate Constructor
+	it checks the type and the clause(whether groupby or not) and calls the appropriate aggregator depending on the type.
+	although, I couldnt complete this part. found it a bit challenging.
+	in Aggregator, I tried to implement the aggregate functions but could not get succesfull test results on it. So I moved on to the next part.
+	
+Part 4: HeapFile Mutability:
+Methods Implemented:-deletetuple
+	My previous programming assignment was incomplete so I had to copy the source code given on the blackboard.
+	after that, the method uses the deletetuple method from heappage using its object. then we get the page id using the tuple and acquire the page in the heappage opject,
+	delete the tuple and return the heappage.
+	
+Part 5: Delete:
+	methods implemented: redNext
+	This method checks whether the tuple which is to be deleted is already deleted or not. If false, it proceeds further and reads the tuples using the iterator.
+	it mainains a count of the total number of deleted tuples.
+	finally, it returns a single field which has the count value on its 0-th position.	
